@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<object xmlns="http://www.ibm.com/xmlns/prod/2009/jsonx">
+  <string name="name">John Smith</string>
+  <object name="address">
+    <string name="streetAddress">21 2nd Street</string>
+    <string name="city">New York</string>
+    <string name="state">NY</string>
+    <number name="postalCode">10021</number>
+  </object>
+  <array name="phoneNumbers">
+    <string>212 555-1111</string>
+    <string>212 555-2222</string>
+  </array>
+  <null name="additionalInfo" />
+  <boolean name="remote">false</boolean>
+  <number name="height">62.4</number>
+  <string name="ficoScore">&gt; 640</string>
+</object>
