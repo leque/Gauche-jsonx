@@ -38,7 +38,7 @@
 (select-module xml.jsonx)
 
 ;; API: jsonx-xmlns : String
-(define jsonx-xmlns "http://www.ibm.com/xmlns/prod/2009/jsonx")
+(define-constant jsonx-xmlns "http://www.ibm.com/xmlns/prod/2009/jsonx")
 
 (define (jsonx name)
   (string->symbol (format "~A:~A" jsonx-xmlns name)))
