@@ -91,6 +91,13 @@ gosh> (pprint (construct-jsonx '#(42 #t null (("foo" . #f)))))
   (http://www.ibm.com/xmlns/prod/2009/jsonx:object
    (http://www.ibm.com/xmlns/prod/2009/jsonx:boolean (|@| (name "foo")) "false")
    )))
+gosh> (use sxml.sxpath)
+gosh> (define t2 (call-with-input-file "test/data/test2.json" parse-json-to-jsonx))
+t2
+gosh> ((sxpath "//j:object[j:string[@name='City' and . = 'SAN FRANCISCO']]/j:string[@name='Zip']/text()"
+               `((j . ,jsonx-xmlns)))
+       t2)
+("94107")
 ```
 
 ## License
